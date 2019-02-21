@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center;
+  align-items: center; */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 50vw;
+  background-color: #fff;
+}
+
+.row {
+  width: 33%;
+  height: 33%;
+  /* border: 5px solid black; */
+  cursor: pointer;
+}
+
+.box.cross:before{
+  content: 'X';
+  font-size: 20px;
+}
+
+.box.circle::after{
+  content: 'O';
+  font-size: 20px;
+}

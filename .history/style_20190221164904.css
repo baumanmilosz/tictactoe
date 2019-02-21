@@ -14,13 +14,7 @@ body {
 }
 
 .game-header {
-  padding: 3rem 0;
-  text-align: center;
-}
-
-.game-header .game-title {
-  font-size: 4rem;
-  text-transform: uppercase;
+  text-align: center
 }
 
 .board {

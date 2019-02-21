@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  /* background-color: blue; */
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 50vw;
+  background-color: royalblue;
+}
+
+.box {
+  width: 33%;
+  height: 33%;
+  flex-wrap: wrap;
+  background-color: rosybrown;
+}
+
+.box.yellow {
+  background-color: red;
+}

@@ -13,16 +13,6 @@ body {
   height: 100vh;
 }
 
-.game-header {
-  padding: 3rem 0;
-  text-align: center;
-}
-
-.game-header .game-title {
-  font-size: 4rem;
-  text-transform: uppercase;
-}
-
 .board {
   display: flex;
   flex-wrap: wrap;
@@ -57,18 +47,18 @@ body {
   border-right: 2px solid black;
 }
 
-.box.circle:before, .box.cross::after {
+.box.cross:before, .box.cross::after {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
-  font-size: 40px;
-}
+  transform: translate(-50%,-50%)}
 
-.box.circle:before{
+.box.cross:before{
   content: 'X';
+  font-size: 20px;
 }
 
-.box.cross::after{
+.box.circle::after{
   content: 'O';
+  font-size: 20px;
 }

@@ -20,7 +20,6 @@ body {
 
 .game-header .game-title {
   font-size: 4rem;
-  text-transform: uppercase;
 }
 
 .board {
