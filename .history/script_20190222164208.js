@@ -90,3 +90,7 @@ function move() {
 }
 
 boxes.forEach(box => box.addEventListener('click', move));
+
+
+
+

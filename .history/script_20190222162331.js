@@ -29,64 +29,37 @@ function move() {
   if (firstRowBoxes[0].classList.contains('circle') && secondRowBoxes[0].classList.contains('circle') && thirdRowBoxes[0].classList.contains('circle')) {
     winner.style.display = "block";
     winner.textContent = "CIRCLE WIN";
-    boxes.forEach(box => box.removeEventListener('click', move));
   }
 
   if (firstRowBoxes[1].classList.contains('circle') && secondRowBoxes[1].classList.contains('circle') && thirdRowBoxes[1].classList.contains('circle')) {
     winner.style.display = "block";
     winner.textContent = "CIRCLE WIN";
-    boxes.forEach(box => box.removeEventListener('click', move));
   }
 
   if (firstRowBoxes[2].classList.contains('circle') && secondRowBoxes[2].classList.contains('circle') && thirdRowBoxes[2].classList.contains('circle')) {
     winner.style.display = "block";
     winner.textContent = "CIRCLE WIN";
-    boxes.forEach(box => box.removeEventListener('click', move));
   }
 
   if (firstRowBoxes[0].classList.contains('cross') && secondRowBoxes[0].classList.contains('cross') && thirdRowBoxes[0].classList.contains('cross')) {
     winner.style.display = "block";
     winner.textContent = "CROSS WIN";
-    boxes.forEach(box => box.removeEventListener('click', move));
   }
 
   if (firstRowBoxes[1].classList.contains('cross') && secondRowBoxes[1].classList.contains('cross') && thirdRowBoxes[1].classList.contains('cross')) {
     winner.style.display = "block";
     winner.textContent = "CROSS WIN";
-    boxes.forEach(box => box.removeEventListener('click', move));
   }
 
   if (firstRowBoxes[2].classList.contains('cross') && secondRowBoxes[2].classList.contains('cross') && thirdRowBoxes[2].classList.contains('cross')) {
     winner.style.display = "block";
     winner.textContent = "CROSS WIN";
-    boxes.forEach(box => box.removeEventListener('click', move));
   }
 
   // DIAGONAL
-
-  if (firstRowBoxes[0].classList.contains('circle') && secondRowBoxes[1].classList.contains('circle') && thirdRowBoxes[2].classList.contains('circle')) {
-    winner.style.display = "block";
-    winner.textContent = "CIRCLE WIN";
-    boxes.forEach(box => box.removeEventListener('click', move));
-  }
-
-  if (firstRowBoxes[0].classList.contains('cross') && secondRowBoxes[1].classList.contains('cross') && thirdRowBoxes[2].classList.contains('cross')) {
-    winner.style.display = "block";
-    winner.textContent = "CROSS WIN";
-    boxes.forEach(box => box.removeEventListener('click', move));
-  }
-
-  if (firstRowBoxes[2].classList.contains('circle') && secondRowBoxes[1].classList.contains('circle') && thirdRowBoxes[0].classList.contains('circle')) {
-    winner.style.display = "block";
-    winner.textContent = "CIRCLE WIN";
-    boxes.forEach(box => box.removeEventListener('click', move));
-  }
-
-  if (firstRowBoxes[2].classList.contains('cross') && secondRowBoxes[1].classList.contains('cross') && thirdRowBoxes[0].classList.contains('cross')) {
-    winner.style.display = "block";
-    winner.textContent = "CROSS WIN";
-    boxes.forEach(box => box.removeEventListener('click', move));
-  }
 }
-
 boxes.forEach(box => box.addEventListener('click', move));
+
+
+
+

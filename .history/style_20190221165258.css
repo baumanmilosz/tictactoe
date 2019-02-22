@@ -68,9 +68,9 @@ body {
 }
 
 .box.circle:before{
-  content: 'O';
+  content: 'X';
 }
 
 .box.cross::after{
-  content: 'X';
+  content: 'O';
 }
