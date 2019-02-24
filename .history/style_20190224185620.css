@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  background-color: #14BDAC;
+}
+
+.game-header {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.game-header .game-title {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.game-header .winner {
+  display: none;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 50vw;
+  max-width: 600px;
+  max-height: 600px;
+}
+
+.box {
+  width: 33.3%;
+  height: 33.3%;
+  display: flex;
+  cursor: pointer;
+}
+
+.box {
+  position: relative;
+}
+
+.box.horizontal-border {
+border-bottom: 10px solid #0DA192;
+}
+
+.box.vertical-border {
+border-right: 10px solid #0DA192;
+}
+
+.box.circle::before, .box.cross::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 40px;
+}
+
+.box.circle:before{
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-width: 5px;
+  border-radius: 50%;
+  animation: circle 2s ease-in-out both;
+}
+
+.box.cross::after{
+  content: 'X';
+  color: #545454;
+}
+
+@keyframes circle {
+  0% {
+
+  }
+  25% {
+    /* border-top: 5px solid #F2EBD3; */
+
+  }
+  50% {
+    /* border-top: 5px solid #F2EBD3; */
+    /* border-right: 5px solid #F2EBD3; */
+
+  }
+  75% {
+    /* border-top: 5px solid #F2EBD3; */
+    /* border-right: 5px solid #F2EBD3; */
+    /* border-bottom: 5px solid #F2EBD3; */
+  }
+  100% {
+    border-top: 5px solid #F2EBD3;
+    border-right: 5px solid #F2EBD3;
+    border-bottom: 5px solid #F2EBD3;
+    border-left: 5px solid #F2EBD3;
+  }
+}
