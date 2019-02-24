@@ -42,7 +42,7 @@ function check() {
     if (combination.every(index => moves[player1].indexOf(index) > -1)) {
       showWinner(player1);
     }
-    if (winCombination.every(index => moves[player2].indexOf(index) > -1)) {
+    if (combination.every(index => moves[player2].indexOf(index) > -1)) {
       showWinner(player2);
     }
   })

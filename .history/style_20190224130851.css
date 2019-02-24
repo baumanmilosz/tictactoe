@@ -23,10 +23,6 @@ body {
   text-transform: uppercase;
 }
 
-.game-header .winner {
-  display: none;
-}
-
 .board {
   display: flex;
   flex-wrap: wrap;
@@ -48,10 +44,6 @@ body {
   display: flex;
   cursor: pointer;
   border: 2px solid black;
-}
-
-.box {
-  position: relative;
 }
 
 .box.circle::before, .box.cross::after {

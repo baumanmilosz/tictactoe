@@ -9,7 +9,7 @@ const board = [
   ['', '', '']
 ]
 
-const winCombinations = [
+const combinations = [
   [0, 1, 2], [3, 4, 5], [6, 7, 8],
   [0, 3, 6], [1, 4, 7], [2, 5, 8],
   [0, 4, 8], [2, 4, 6]
@@ -28,7 +28,7 @@ function turn() {
 }
 
 function check() {
-
+  const winner = document.querySelector('.winner');
   const result = board.reduce((total, row) => total.concat(row));
 
   let moves = {
@@ -36,25 +36,23 @@ function check() {
     'cross': []
   };
 
+  function showWinner(winner) {
+    winner.style.display = 'block';
+    winner.textContent = `Winner:${winner} !`;
+    boxes.forEach(box => box.removeEventListener('click', turn));
+    setTimeout(() => window.location.reload(), 4000);
+  }
+
   result.forEach((box, index) => moves[box] ? moves[box].push(index) : null);
 
-  winCombinations.forEach(combination => {
+  combinations.forEach(combination => {
     if (combination.every(index => moves[player1].indexOf(index) > -1)) {
-      showWinner(player1);
+      showWinner(player1)
     }
-    if (winCombination.every(index => moves[player2].indexOf(index) > -1)) {
-      showWinner(player2);
+    if (combination.every(index => moves[player2].indexOf(index) > -1)) {
+      showWinner();
     }
   })
-}
-
-function showWinner(winPlayer) {
-  const whoWinner = document.querySelector('.winner');
-
-  whoWinner.style.display = 'block';
-  whoWinner.textContent = `Winner: ${winPlayer} !`;
-  boxes.forEach(box => box.removeEventListener('click', turn));
-  setTimeout(() => window.location.reload(), 4000);
 }
 
 boxes.forEach(box => box.addEventListener('click', turn));

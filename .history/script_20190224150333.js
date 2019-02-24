@@ -9,7 +9,7 @@ const board = [
   ['', '', '']
 ]
 
-const winCombinations = [
+const combinations = [
   [0, 1, 2], [3, 4, 5], [6, 7, 8],
   [0, 3, 6], [1, 4, 7], [2, 5, 8],
   [0, 4, 8], [2, 4, 6]
@@ -38,11 +38,11 @@ function check() {
 
   result.forEach((box, index) => moves[box] ? moves[box].push(index) : null);
 
-  winCombinations.forEach(combination => {
+  combinations.forEach(combination => {
     if (combination.every(index => moves[player1].indexOf(index) > -1)) {
       showWinner(player1);
     }
-    if (winCombination.every(index => moves[player2].indexOf(index) > -1)) {
+    if (combination.every(index => moves[player2].indexOf(index) > -1)) {
       showWinner(player2);
     }
   })
