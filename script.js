@@ -2,6 +2,7 @@ var boxes = document.querySelectorAll('.box');
 const player1 = 'circle';
 const player2 = 'cross';
 var round = 0;
+var winner = null;
 let oddRound = true;
 
 const board = [
@@ -24,12 +25,12 @@ function turn() {
   this.classList.add(turn);
   board[row][col] = turn;
   oddRound = !oddRound;
+  round++;
 
   check();
 }
 
 function check() {
-
   const result = board.reduce((total, row) => total.concat(row));
 
   let moves = {
@@ -43,16 +44,21 @@ function check() {
     if (winCombination.every(index => moves[player1].indexOf(index) > -1)) {
       showWinner(player1);
     }
+
     if (winCombination.every(index => moves[player2].indexOf(index) > -1)) {
       showWinner(player2);
     }
   })
+  if (round === 9 && winner !== 'PLAYER1' && winner !== 'PLAYER2') {
+    showWinner();
+  }
 }
 
-function showWinner(winPlayer) {
+
+const showWinner = winPlayer => {
   const whoWinner = document.querySelector('.winner');
 
-  let winner = null;
+
   let draw = null;
   if (winPlayer === player1) {
     winner = 'PLAYER1';
@@ -62,7 +68,6 @@ function showWinner(winPlayer) {
     winner = false;
     draw = 'DRAW';
   }
-  console.log(winner);
 
   whoWinner.style.display = 'block';
   whoWinner.textContent = `Winner: ${winner ? winner : draw}!`;
